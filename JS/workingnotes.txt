@@ -1,0 +1,46 @@
+what is JS ?
+Js is high level,dynamic, and interpreted programming language that is primarily used for client-side scripting 
+on the web. It is know for its ability to add interactivity to web pages and is often used in conjection with HTML and CSS
+
+complier will excute the entire code at time.
+(The combination of complier and interpreter is called programming language {In this the complier will compile the code first than run line by line the interpreter}) 
+(when the language have only interpreter than its called scripting language)
+(JS is a interpreted programming language)
+interpreter will excute line by line,
+
+Key features of JS.
+1)Dynamic typing:
+ Js is a dynamically typing ,which means that the data type of a variable is determined at run time.
+2)JS is a first class function:
+ Js functions are first-class citizens, which means they can be passed around like any other variable.
+ Event-driven user action, reaction(click,hover)
+3)Platform Independent(browser):ones excuted the file ,the excute file can runs on different Platforms
+4)Object-oriented: Js supports object-oriented programming(oop) concepts such as encapsulation,inheritance,and polymorphism.
+ex:
+  let a=10;
+in backend it will store like
+ex:
+   window={
+    a:10
+   }
+   here window object is common in js,it a global object
+
+
+History of JS:(namesof Js) mocha--- > live script-------->Java script
+In 1995 starts to build the js 
+brenden eich at
+
+
+Time line:
+1995:brenden eich created the first version of JS. called mocha.
+1996:microsoft introduced JScript comprtitor
+1997:js become standarized as ECMAScipt
+2005:AJAX(asyncronos java script Xml) syncronos means one by one will excute until next task will in wait,asyncronos
+    AJAX will do where syncronos tasks will converts into asyncronos.
+2015:let and const,arrow function(=>)
+
+version of JS:
+ES1(1997)---------first edition
+ES3(1999)---------->regular expression
+ES5(2009)--------->JSON
+ES69(2015)----->let,const,arrow function
