@@ -75,3 +75,20 @@ console.log(num);
     console.log(a);
 }
 console.log("num value at outside of block" + num);
+
+
+var b=20;
+console.log(b);
+// in back-end it will store like this
+// var b;
+// b=20;
+// console.log(b);output is 20--------------->
+
+console.log(b);
+var b=20;
+// document.writeln(b);
+
+//in back-end it will store like this
+//var b;
+//console.log(b); in this situation the out put is undefined
+//b=20;
