@@ -21,10 +21,18 @@ types of Variable:
   a.re-declaration is possible in var keyword.
   b.re-assignment is also possible in var
   c.functional scope
+  d.hoisting is possible and value is assigned has undefined
 2.let
   a.re-declaration is  not possible .
   b.re-assignment is also possible 
   c.block scope
+  d.hoisting is possible but value is not assigned
+
+3.const:
+  a.re-declaration is not possible
+  b.re-assignment is not possible
+  c.block scope
+  d.hoisting is possible but value is not assinged
   
 
 */
@@ -92,3 +100,42 @@ var b=20;
 //var b;
 //console.log(b); in this situation the out put is undefined
 //b=20;
+let x=20;
+x=30;
+console.log(x);
+
+{
+  //let x=20;
+  //let x=30; throws error
+  {
+    let x=40;
+    console.log(x);
+    var y=100;
+  }
+  console.log(x);
+  console.log(y);
+}
+console.log(x);
+
+
+let number;
+console.log(number);
+number=20;
+
+
+//const
+const pi=3.144;
+//pi=4.4;
+//console.log(pi); //error Assignment to constant variable.
+console.log(pi);
+
+//block scope
+
+{
+  const a=100;
+  {
+    const a=200;
+    console.log(a);
+  }
+  console.log(a);
+}
