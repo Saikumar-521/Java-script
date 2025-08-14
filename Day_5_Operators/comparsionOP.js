@@ -28,6 +28,6 @@ console.log([]==0);
 console.log([]==![]);  
 
 console.log(null>0); //false
-console.log(null>=0); //true
-console.log(null==0);
+console.log(null>=0); //true 
+console.log(null==0);// null becomes undefined in compare operator.but in relation like >,< the null is become 0,
 console.log(undefined==0);

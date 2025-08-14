@@ -18,5 +18,5 @@ let x=10;
 x+= x-= x/=2; //x=x+x-x/2
 console.log(x);
 x="20";
-x-= x+=x%=x/=2;
+x-= x+=x%=x/=2;//x=x-x+x%x/2; //-180
 console.log(x);
