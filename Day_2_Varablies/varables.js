@@ -33,6 +33,13 @@ types of Variable:
   b.re-assignment is not possible
   c.block scope
   d.hoisting is possible but value is not assinged
+
+
+Variable name Rules:
+1.must  start with a letter, underscore,or dollar sign.
+2.cannot start with a number
+3.cannot conatin spaces or special charaters.
+4.follow the camel case while declaring the variables.
   
 
 */
@@ -139,3 +146,8 @@ console.log(pi);
   }
   console.log(a);
 }
+
+let  _cash=300;
+// let @cash=300;
+let $sai;
+// let 1sa
