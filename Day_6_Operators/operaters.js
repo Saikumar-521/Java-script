@@ -20,7 +20,7 @@ Else → return b.
 
 a && b
 If a is falsy → return a.
-Else → return b.
+Else → return b.0
 Because JavaScript is a loosely typed language and designed to be very flexible:
 
 !-->flip truty/falsey value
