@@ -61,7 +61,7 @@ if(number>=0){
   {
     // 
     if(number==0){
-      console.log("Netural number"+number);
+      console.log("Netural number "+number);
     }
     else{
       console.log("Postive Even number"+number);
@@ -79,4 +79,22 @@ else{
   else{
     console.log("Negative Odd number "+number)
   }
+}
+
+let marks=80;
+
+if(marks>=90){
+  console.log("Grade: A"+marks);
+}
+else if(marks>=80){
+  console.log("Grade: B"+marks);
+}
+else if(marks>=70){
+  console.log("Grade: C"+marks);
+}
+else if(marks>=60){
+  console.log("Grade: D"+marks);
+}
+else{
+  console.log("Sorry Your Poor in Grade:E"+marks);
 }
