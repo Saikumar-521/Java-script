@@ -21,6 +21,7 @@ Else → return b.
 a && b
 If a is falsy → return a.
 Else → return b.
+Because JavaScript is a loosely typed language and designed to be very flexible:
 
 !-->flip truty/falsey value
 !!-->double flip or same meaning without performin not operator

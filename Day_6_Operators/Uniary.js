@@ -33,4 +33,4 @@ console.log(a--);//now a=7
 console.log(a);//6
 
 let s=5;
-console.log(s++ + --s + s-- + ++s);
+console.log(s++ + --s + s-- + ++s);//20
