@@ -29,8 +29,39 @@ control the flow of excution
   {
     if any condition is not true excutes the else block
   }
+3.switch
+------>used for reduce the code compare to else if
+switch is a conditional statement
+it excutes baesed on condition 
+for many option based on the value
 
+syntax:
+switch(expression){
+case value1:
+  //code
+  //break;
+case value2:
+  //code
+  //break;
+default:
+  //code
+}
+how it works:
+1.the swicth evalutes the expresssion
+2.it will compare the result with case values
+3.if it matches---> excutes that case block until a break is found
+4.if no matches --->excutes the default block
+
+use cases:
+1.TV remote
+2.menu selection in a application
+3.perfroming action based on the day of week
+
+
+MAIN ----POINTS OF SWITCH:
+1.
 */
+
 
 
 let cartValue=100;
