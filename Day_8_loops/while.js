@@ -35,7 +35,7 @@ while(str[i1++]) {
 }
 
 let num = 5;
-while(num = num - "a") {
+while(num = num - "a") { // nothing will display why beacuse condition will become false
     console.log(num);
 }
 
