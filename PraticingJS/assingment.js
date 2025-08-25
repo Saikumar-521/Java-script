@@ -466,3 +466,7 @@
 //     console.log("Hello Teen");
 // else
 //     console.log("Welcome Adult");*/
+
+
+/*LOOPS assignment */
+

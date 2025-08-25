@@ -69,3 +69,9 @@ console.log(years.innerText);
 console.log(typeof new Date());
 let s = 521;
 console.log(`sai kumar ${s}`);
+
+
+
+let sum = 0;
+for (let i = 1; i <= 5; sum += i, i++); //in this statement for block is empty, ;---->it refers for block is empty,so sum value is updated until the condition becomes false
+console.log(sum);

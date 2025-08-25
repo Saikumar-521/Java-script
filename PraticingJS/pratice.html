@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="bullet">
+
+    </div>
+    <script>
+        let bullet = document.getElementById("bullet");
+        let products = ["laptop", "mobile", "camera", "shoes", "earphones"]
+        for (let i = 0; i < products.length; i++) {
+            bullet.innerHTML += `<ul type="square"><li>${products[i]}</li></ul>`;
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Orginal price</td>
+                <td>Discount price</td>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+    <script>
+        let data = document.getElementById("data");
+        let prices = [1000, 2000, 3000, 1500];
+        for (let i = 0; i < prices.length; i++) {
+            data.innerHTML += `<tr><td>${prices[i]}</td></tr>`;
+        }
+        for (let i = 0; i < prices.length; i++) {
+            // let discount= prices[i]*0.90;
+            data.innerHTML += `<tr><td>${prices[i] * 0.90}</td></tr>`;
+        }
+    </script>
+</body>
+
+</html> -->
