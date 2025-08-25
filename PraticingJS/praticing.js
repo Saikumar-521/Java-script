@@ -27,7 +27,7 @@ function function2(){
  let name="sai";
  console.log(name);
 }
-function2();
+function2()
 //console.log(name); //througs not defined
 
 

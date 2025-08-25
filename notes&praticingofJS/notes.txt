@@ -1,0 +1,53 @@
+founder of js is brenden eich
+in 1995 ----------->it names is mocha------->later its name is Livescipt----------->at that time java is popular so javascript
+
+euopean computer manfactures association--------->for standards the jslanguage ------->offical name ECMAScript-262
+
+what is js?
+--->using which we can make a web application interactive and dynamic
+--->js is used to make a web application alive
+--->js was developed by brendan eich in 1995
+--->js became ECMA  standard in 1997-ECMA
+Script
+
+1995--------->netscape navigator
+javascript engine ?
+
+ECMAScript === js engine === interpreter
+
+complier/interpreter
+complier:
+translate the entire source code of a program into machine code(or an intermediate code)before excution----------->CPU excutes the machine code
+--------->once complied, programs typically run faster since they are excuted directly by the machine cpu.
+
+interpreter:
+translate the source code into machine code line-line or statement by statement at runtime and excutes immediately
+
+----------------------------------------------------------------------------------------------------------------
+questions on JS?
+1) why should I learn js?
+*what is JS & what can we do with it?
+* How make a  web application dynamic?
+frontend,back-end, fullstack
+*JS engine?
+*is js browser only language?
+no in other environment also used example node.js
+
+*Name of the JS engine used by google chrome?
+v8--------->combination compliation and interpretor is used for increasing the performance
+
+*who invented js?
+brenden eich
+*what is the official name given to js?
+
+ECMAScript
+
+*what is fullstack?
+frontend-back-end
+
+
+*netscape navigator browser-------> first js run in this browser by brendan eich--------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+in js-----> everything is object
