@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .photo {
+            width: 200Px;
+            height: 200px;
+            border-radius: 20px;
+        }
+
+        .productcontainer {
+            display: inline;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,13 +29,13 @@
         let products = [
             { img: "../assesets/OIP (1).jpeg", name: "Shirt", price: 500, category: "Clothing" },
             { img: "../assesets/OIP.jpeg", name: "Watch", price: 1200, category: "Accessories" },
-            { img: "../assesets/OIP.jpeg", name: "Watch", price: 1200, category: "Accessories" },
-            { img: "../assesets/OIP.jpeg", name: "Watch", price: 1200, category: "Accessories" }
+            { img: "../assesets/OIP.jpeg", name: "shirt", price: 1200, category: "Accessories" },
+            { img: "https://tse4.mm.bing.net/th/id/OIP.SAEHv-JSa7p8FJHvMCyBTQHaHa?pid=Api&P=0&h=180", name: "T-Shirt", price: 1200, category: "Accessories" }
         ];
 
         for (let i = 0; i < products.length; i++) {
             productcontainer.innerHTML += `<div>
-                <img src="${products[i].img}"> 
+                <img src="${products[i].img}" class="photo"> 
                 <h2> ${products[i].name} </h2>
                 <p> price: ${products[i].price}<p>
                 <p>category: ${products[i].category} </div>`;

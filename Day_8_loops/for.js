@@ -62,7 +62,7 @@ for (let i = 0; i < months.length; i++)
     month.innerHTML += `<option>${months[i]}</option><hr>`;
 
 for (let i = new Date().getFullYear(); i >= 1900; i--)
-    years.innerHTML += `<option>${i}</option>`;
+    years.innerHTML += `<option class="year">${i}</option>`;
 
 console.log(years.innerHTML);
 console.log(years.innerText);
