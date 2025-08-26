@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <td colspan="2">Dynamic Offer Based on Category</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table border="2">
+                        <thead>
+                            <tr>
+                                <td>Electronics</td>
+                            </tr>
+                        </thead>
+                        <tbody id="electronics">
+
+                        </tbody>
+                    </table>
+                </td>
+
+                <td>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <td>Clothings</td>
+                            </tr>
+                        </thead>
+                        <tbody id="clothing">
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script>
+        let clothing = document.getElementById("clothing");
+        let electronics = document.getElementById("electronics");
+        let products = [
+            { name: "Shirt", price: 500, category: "Clothing" },
+            { name: "Jeans", price: 800, category: "Clothing" },
+            { name: "Headphones", price: 1500, category: "Electronics" },
+            { name: "Mobile", price: 15000, category: "Electronics" }
+        ];
+
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].category == "Clothing")
+                clothing.innerHTML += `<tr><td>${products[i].name}<td> 
+                <td> ${products[i].price}</td>
+                <td> ${products[i].price * 0.95}</td></tr>`;
+            else
+                electronics.innerHTML += `<tr><td>${products[i].name}<td> 
+                <td> ${products[i].price}</td>
+                <td> ${products[i].price * 0.90}</td></tr>`;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="productcontainer">
+
+    </div>
+    <script>
+        let productcontainer = document.getElementById("productcontainer")
+        let products = [
+            { img: "../assesets/OIP (1).jpeg", name: "Shirt", price: 500, category: "Clothing" },
+            { img: "../assesets/OIP.jpeg", name: "Watch", price: 1200, category: "Accessories" },
+            { img: "../assesets/OIP.jpeg", name: "Watch", price: 1200, category: "Accessories" },
+            { img: "../assesets/OIP.jpeg", name: "Watch", price: 1200, category: "Accessories" }
+        ];
+
+        for (let i = 0; i < products.length; i++) {
+            productcontainer.innerHTML += `<div>
+                <img src="${products[i].img}"> 
+                <h2> ${products[i].name} </h2>
+                <p> price: ${products[i].price}<p>
+                <p>category: ${products[i].category} </div>`;
+        }
+
+    </script>
+</body>
+
+</html>

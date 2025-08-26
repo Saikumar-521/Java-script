@@ -285,7 +285,7 @@
 
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -308,11 +308,11 @@
             item--;
         }
         for (let i = 0; i < items.length; i++)
-            cart.innerHTML += `<ol type="A"><li>${items[i]}</li></ol>`;
+            cart.innerHTML += `<ol><li>${items[i]}</li></ol>`;
     </script>
 </body>
 
-</html>
+</html> -->
 
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -821,3 +821,88 @@
 </body>
 
 </html -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <td>Dynamic Offer Based on Category</td>
+            </tr>
+            <tr>
+                <td>
+                    ta
+                </td>
+                <td>Clothing</td>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        let clothing = document.getElementById("clothing");
+        let electronics = document.getElementById("electronics");
+        let products = [
+            { name: "Shirt", price: 500, category: "Clothing" },
+            { name: "Jeans", price: 800, category: "Clothing" },
+            { name: "Headphones", price: 1500, category: "Electronics" },
+            { name: "Mobile", price: 15000, category: "Electronics" }
+        ];
+
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].category == "Clothing")
+                clothing.innerHTML += `<tr><td>${products[i].name}<td> 
+                <td> ${products[i].price}</td>
+                <td> ${products[i].price * 0.95}</td></tr>`;
+            else
+                electronics.innerHTML += `<tr><td>${products[i].name}<td> 
+                <td> ${products[i].price}</td>
+                <td> ${products[i].price * 0.95}</td></tr>`;
+        }
+
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="productcontainer">
+
+    </div>
+    <script>
+        let productcontainer = document.getElementById("productcontainer")
+        let products = [
+            { img: URL("https://tse1.mm.bing.net/th/id/OIP.jHvTOSF7924Ah63W7mozxQHaEo?pid=Api&P=0&h=180"), name: "Shirt", price: 500, category: "Clothing" },
+            { img: URL("https://tse4.mm.bing.net/th/id/OIP.Mvcr0QDsGXOx29cSBfXd6AHaE7?pid=Api&P=0&h=180"), name: "Watch", price: 1200, category: "Accessories" }
+        ];
+
+        for (let i = 0; i < products.length; i++) {
+            productcontainer.innerHTML += `<div>
+                <img> ${products[i].img}</img>
+                <h2> ${products[i].name} </h2>
+                <p> price: ${products[i].price}<p>
+                <p>category: ${products[i].category} </div>`;
+        }
+
+    </script>
+</body>
+
+</html>
