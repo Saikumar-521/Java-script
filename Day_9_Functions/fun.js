@@ -30,23 +30,52 @@ function function_name(){
 */
 
 
-function userName() {
-    console.log("Sai Kumar learning function concept in JS");
+// function userName() {
+//     console.log("Sai Kumar learning function concept in JS");
+// }
+// userName()
+// console.log("Is it really");
+// userName()
+
+
+// let username = "sai kumar";
+// function userdata() {
+//     console.log(`Hii bro what's going on ${username}`);
+// }
+
+// // with parameter and argmus
+
+// function user(a) {
+//     console.log(`hello ${a}`);
+// }
+
+// user("sai kumar")
+
+//function with return
+
+
+//push random number
+//divisile by 3 bizz
+//divisible by 3 buzz
+//divisible by both bizz buzz
+
+//function expression 
+
+// function color(a) {
+//   document.body.style.backgroundColor = `${a}`;
+//   document.body.style.div.boxShadow = 20;
+// }
+
+function random(a) {
+  if (a % 3 == 0)
+    console.log("Bizz");
+  if (a % 5 == 0)
+    console.log("BuZZ");
+  if (a % 3 == 0 && a % 5 == 0)
+    console.log("Bizz Buzz");
+
+
 }
-userName()
-console.log("Is it really");
-userName()
-
-
-let username = "sai kumar";
-function userdata() {
-    console.log(`Hii bro what's going on ${username}`);
-}
-
-// with parameter and argmus
-
-function user(a) {
-    console.log(`hello ${a}`);
-}
-
-user("sai kumar")
+random(20)
+random(9)
+random(15)
