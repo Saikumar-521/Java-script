@@ -51,3 +51,47 @@ frontend-back-end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 in js-----> everything is object
+for formatting your document install preety extension
+
+
+JS is a single thread work ?-------------->JS can only excute one instruction at a time,That's why it is called single threaded.
+(Synchronous) not equal to single thread
+Synchronous programming means that tasks are executed sequentially, one after the other.-------
+* each operation must complete before the next one begis.
+* In thismodel, the program excution is blockeduntil the current task is finished.
+
+Asynchronous----------->we can do our code into the Asynchronous using some methods like---->setTimerout
+
+//comments in js  used for giveing information how code is works
+single line comments  //----> cltr + /
+multiple line comment  /**/----->shift + alt +a
+
+what is object-oriented programming--------------> class--object
+
+object------>object is a thing/entity that has a state and behavior------>state-----properties----------->state is represented with variables
+                                                                   ----------->behavior------->actions--------->behavior is represented with function
+class---------> class is blueprint to create objects
+
+in primitive datatype------->we can store single value and print
+in objects/ non primitive--------> we can store multiple value
+
+
+data types:
+number
+int 
+float number
+
+
+the higest number to store in int variable is -------2^53  if we store higer number than this take only even numbers6
+type conversion;
+if convert from string to number use + unary operator or number methods
+if convert form bitint to number use number method only the uniary + operator is not worked in that case
+to assign the number to variables use number() method or directly assign number
+same bigINt() also
+
+
+boolean 
+true,false
+
+string:
+anything that is enclosed in the single,double qoautes or in back tickes that is called string.
