@@ -40,12 +40,13 @@
         }
     </script> -->
 
-    <input type="text" id="text" onclick="add()" placeholder="Enter your name">
-    <!-- <button >submit</button> -->
+    <input type="text" id="text">
+    <!-- <button onclick="add()">submit</button> -->
     <script>
-        function add(name = 'Dear') {
-            alert(`Hello ${name}`);
-        }
+        document.getElementById('value').innerHTML =
+            function add(name = 'Dear') {
+                alert(`Hello ${name}`);
+            }
     </script>
 </body>
 
