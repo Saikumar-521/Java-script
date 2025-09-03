@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <button onclick="increment()">Increment</button>
+    <button id="value">values</button>
+    <button onclick="decrement()">Decrement</button>
+    <script>
+       // let value = document.getElementById('value');
+
+        // function increment(a) {
+        //     for (let i = 1; i < a; i++) {
+        //         value.innerHTML += `<div>${i}</div>`;
+        //     }
+        // }
+        // function decrement(a) {
+        //     for (let i = a; i >= 0; i--) {
+        //         // setTimeout(() => {
+        //         //     value.innerHTML += `<b>${i}</b>`
+        //         // }, 1000 * (a - i));
+        //         value.innerHTML += `<div>${i}</div>`;
+        //     }
+        // }
+        let i=0;
+        function increment() {
+            i++;
+            // value.innerHTML = `${i++}`;
+            document.getElementById('value').innerHTML = `${i}`;
+        }
+        function decrement() {
+            i--;
+            document.getElementById('value').innerHTML = `${i}`;
+        }
+    </script> -->
+
+    <input type="text" id="text" onclick="add()" placeholder="Enter your name">
+    <!-- <button >submit</button> -->
+    <script>
+        function add(name = 'Dear') {
+            alert(`Hello ${name}`);
+        }
+    </script>
+</body>
+
+</html>
