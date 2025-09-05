@@ -43,18 +43,45 @@ null: null is an assignment value that represents the intentional absence of any
 | **Default Value** | Default value for **uninitialized variables** and **missing parameters**. | You **set** `null` intentionally when you want to represent "no value".                           |
 | **Usage**         | Indicates that a variable or property has not been assigned a value yet.  | Indicates the intentional absence of any object value.                                            |
 
+
 6)symbol:unique value generate 
 what:represent unique and immutable primitive value
 why:used for object property
 where:object property
 
-non-primitive data types:
+A Symbol is a primitive data type introduced in ES6 (ECMAScript 2015).
+It is used to create unique and immutable values, mainly useful as object property key
+
+
+
+
+Non-primitive data types:
 1.Array
+
+An array in JavaScript is a special object used to store multiple values in a single variable.
+
+Arrays can hold any data type — numbers, strings, objects, functions, etc.
+
+Arrays are zero-indexed → the first element is at index 0.
+
+They are mutable → we can add, remove, or modify elements.
+
 what:repesents collection of values with hetrogeious data types
 why:used for storing multiple values
 where:list of items.shopping cart etc
 accessbility:through indexes(0,1,3,4)and size of the array starts from 1
+
+
 2.object
+
+An object in JavaScript is a collection of key-value pairs.
+
+A key (or property name) is always a string or symbol.
+
+A value can be anything → number, string, array, function, another object, etc.
+
+Objects are used to store, organize, and manipulate structured data.
+
 what:collection of key value pair
 why:used for stoting multiple values.
 where:user data
