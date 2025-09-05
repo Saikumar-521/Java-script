@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="price" placeholder="Enter price">
+    <input type="number" id="quantity" placeholder="Enter quantity">
+    <button onclick="total()">Total</button>
+    <p id="result"></p>
+
+    <script>
+
+        function gettotal(price, quantity) {
+            return price * quantity;
+        }
+        function total() {
+            let price = Number(document.getElementById("price").value);
+            //here string to number conversion when user enter input the data from prompt or get data from document it is string type,and value is used to get the value from input box,and getElementById is used to get the element by id
+            let quantity = Number(document.getElementById("quantity").value);
+            // let total = price * quantity;
+            let total = gettotal(price, quantity);
+            document.getElementById("result").innerText = "Total price is: " + total;
+        }
+    </script>
+</body>
+
+</html>
