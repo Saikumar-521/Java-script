@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="text-3xl font-bold underline text-clifford">
+        Hello world!
+    </h1>
+    <button class="bg-pink-400 py-2 px-4 text-white rounded-lg" onclick="popup()">Show Offer</button>
+
+    <iframe class="aspect-video md:aspect-square ..." src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+    <script>
+        let popup = function () {
+            alert("50% offer on all products");
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Star Rating</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <!-- Feedback Card -->
+<div class="bg-white shadow-xl rounded-xl p-6 w-80 text-center">
+    <h2 class="text-2xl font-bold mb-4 text-gray-700">Give Your Feedback</h2>
+
+    <!-- Stars Container -->
+    <div id="stars" class="flex justify-center gap-2 text-gray-400 text-4xl cursor-pointer">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+    </div>
+
+    <!-- Feedback Text -->
+    <p id="feedback-text" class="mt-4 text-gray-600 text-lg">Select a rating</p>
+
+    <!-- Submit Button -->
+    <button id="submit"
+        class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold transition duration-300">
+        Submit
+    </button>
+</div>
+
+<script>
+    const stars = document.querySelectorAll(".star");
+    const feedbackText = document.getElementById("feedback-text");
+    const submitBtn = document.getElementById("submit");
+    let rating = 0;
+
+    // Highlight stars on click
+    stars.forEach((star, index) => {
+        star.addEventListener("click", () => {
+            rating = index + 1;
+
+            // Highlight selected stars
+            stars.forEach((s, i) => {
+                s.style.color = i < rating ? "#facc15" : "#d1d5db"; // Yellow for selected, gray for unselected
+            });
+
+            // Update feedback message
+            feedbackText.textContent = `You selected ${rating} star${rating > 1 ? "s" : ""}`;
+        });
+    });
+
+    // Submit button functionality
+    submitBtn.addEventListener("click", () => {
+        if (rating === 0) {
+            alert("Please select a rating before submitting!");
+        } else {
+            alert(`Thanks for giving ${rating} star${rating > 1 ? "s" : ""} ⭐`);
+        }
+    });
+</script>
+</body>
+
+</html> -->
