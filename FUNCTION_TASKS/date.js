@@ -43,7 +43,7 @@ setInterval(decreasingTime, 1000);
 decreasingTime();
 
 // Set the target date & time (Change as per your need)
-let targetDate = new Date("2025-09-8 14:00:00");
+let targetDate = new Date("2025-09-9 14:00:00");
 
 function countdownTimer() {
     let now = new Date();
