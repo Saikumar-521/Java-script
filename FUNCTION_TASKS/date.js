@@ -41,3 +41,31 @@ function decreasingTime() {
 }
 setInterval(decreasingTime, 1000);
 decreasingTime();
+
+// Set the target date & time (Change as per your need)
+let targetDate = new Date("2025-09-8 14:00:00");
+
+function countdownTimer() {
+    let now = new Date();
+    let diff = targetDate - now;
+
+    // If time is up
+    if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "🎉 Time's up!";
+        clearInterval(timer);
+        return;
+    }
+
+    // Convert difference into days, hours, minutes, seconds
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    // Display the countdown
+    document.getElementById("countdown").innerHTML =
+        `${days} days ${hours} hrs ${minutes} mins ${seconds} secs to go`;
+}
+
+// Call function every second
+let timer = setInterval(countdownTimer, 1000);
