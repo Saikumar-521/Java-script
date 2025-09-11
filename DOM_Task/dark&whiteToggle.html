@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggleBtn">Switch to Dark Mode</button>
+    <div id="content">
+        <h1>Welcome to the Toggle Mode App</h1>
+        <p>This is a simple example of toggling between dark and light mode using JavaScript.</p>
+    </div>
+    <script src="dark&whiteToggle.js"></script>
+    <style>
+        body {
+            background: #fff;
+            color: #222;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #222;
+            color: #fff;
+        }
+        #toggleBtn {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
