@@ -45,3 +45,7 @@ function message() {
         msg.innerText = "";
     }, 2000)
 }
+
+function dark() {
+    document.body.background - color.black;
+}
