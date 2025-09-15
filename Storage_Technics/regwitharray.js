@@ -9,7 +9,6 @@ function RegForm() {
     //     'age': age,
     //     'pwd': pwd
     // }
-
     // array.push(users);
 
     let con = JSON.stringify(array)

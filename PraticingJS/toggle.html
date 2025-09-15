@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        body.light {
+            background: white;
+            color: black;
+        }
+
+        body.dark {
+            background: black;
+            color: white;
+        }
+
+        .toggle-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="light">
+    <h1>Toggle button</h1>
+    <button class="toggle-btn" onclick="toggleMode()">Swicth mode</button>
+    <script>
+        function toggleMode() {
+            let body = document.body;
+            body.classList.toggle('Dark');
+            body.classList.toggle('white');
+        }
+    </script>
+</body>
+
+</html>

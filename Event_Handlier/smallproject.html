@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mouse Pattern with Background</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('https://tse4.mm.bing.net/th/id/OIP.UFrQdDHwdOfFZPE13dIKAgHaHa?pid=Api&P=0&h=180');
+            /* replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            cursor: crosshair;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fade 1s forwards;
+        }
+
+        @keyframes fade {
+            to {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.body.addEventListener("mousemove", function (e) {
+            const circle = document.createElement("div");
+            circle.classList.add("circle");
+
+            // Random size between 10px and 40px
+            const size = Math.floor(Math.random() * 30) + 10;
+            circle.style.width = size + "px";
+            circle.style.height = size + "px";
+
+            // Random color
+            const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33F6"];
+            circle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+            // Position at mouse
+            circle.style.left = e.pageX - size / 2 + "px";
+            circle.style.top = e.pageY - size / 2 + "px";
+
+            document.body.appendChild(circle);
+
+            // Remove after 1 second
+            setTimeout(() => {
+                circle.remove();
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
