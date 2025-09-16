@@ -4,25 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <input type="text" id="uname" placeholder="Enter your name" required>
-    <input type="text" id="sub" placeholder="enter your subject" required>
-    <input type="number" id="marks" placeholder="Enter your marks" required>
-    <button onclick="DetailsSubmit()">Submit</button>
+    <form action=""
+        class="flex flex-col md:flex-row items-center justify-center gap-4 bg-gray-100 p-6 rounded-2xl shadow-lg w-fit mx-auto mt-10">
 
-    <!-- <p>Total Students:</p>
-    <p>Average Score:</p>
-    <p>Top Store Student:</p> -->
-    <div id="topper">
+        <input type="text" id="uname" placeholder="Enter your name" required
+            class="border-2 border-gray-300 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400">
 
-    </div>
-    <h1>Student Information</h1>
-    <ul>
+        <input type="text" id="sub" placeholder="Enter your subject" required
+            class="border-2 border-gray-300 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400">
 
-    </ul>
+        <input type="number" id="marks" placeholder="Enter your marks" required
+            class="border-2 border-gray-300 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <button type="button" onclick="DetailsSubmit()"
+            class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">
+            Submit
+        </button>
+    </form>
+
+    <div id="topper" class="mt-6 text-center text-lg font-bold text-green-600"></div>
+
+    <h1 class="text-2xl font-bold mt-8 text-center">Student Information</h1>
+    <ul class="list-disc list-inside mt-4 max-w-md mx-auto text-gray-700"></ul>
+
     <script src="student.js"></script>
 
 

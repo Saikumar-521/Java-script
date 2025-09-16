@@ -7,10 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <button id="dark" onclick="dark('black')">Dark</button>
-    <button id="light">light</button>
-    <h1 class="bg-sky-300 text-2xl text-center font-bold p-2">Products</h1>
+<body id="mainbody" class="trabsition duration-300 bg-white text-black flex flex-col items-center">
+    <!-- <button id="dark" onclick="dark('black')">Dark</button>
+    <button id="light">light</button> -->
+    <h1 class="bg-sky-300 text-2xl text-center font-bold p-2">Products
+        <button onclick="toggleTheme()" class="border-2 bg=blue-500 px-4 py-2 text-white">Toggle</button>
+    </h1>
     <div id="ProductContainer" class="flex flex-wrap justify-center mt-4"></div>
     <div id="message"></div>
     </div>

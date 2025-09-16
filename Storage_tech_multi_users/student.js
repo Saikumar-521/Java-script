@@ -44,7 +44,7 @@ function DetailsSubmit() {
     }
     // Display the topper's details
     let topper = document.getElementById('topper');
-    topper.innerHTML = `<p>Student Name: ${topperStudent.name} </p>
+    topper.innerHTML = `<p class="text-2xl font-semibold">Student Name: ${topperStudent.name} </p>
         <p>Subject: ${topperStudent.sub}</p>
         <p>Top marks: ${topperStudent.marks}</p>`;
     // let topper = document.getElementById('topper');

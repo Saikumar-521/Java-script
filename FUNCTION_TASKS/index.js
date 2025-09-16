@@ -49,3 +49,19 @@ function message() {
 function dark() {
     document.body.background - color.black;
 }
+
+const body = document.getElementById('maniBody');
+
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.replace("bg-white", "bg-gray-600")
+}
+function toggleTheme() {
+    if (body.classList.contains('bg-white')) {
+        body.classList.replace("bg-white", "bg-gray-600");
+        localStorage.setItem('theme', 'dark');
+    }
+    else {
+        body.classList.replace('bg-gray-600', 'bg-white');
+        localStorage.setItem('theme', 'light');
+    }
+}
