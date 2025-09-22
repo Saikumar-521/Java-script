@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Alert Box</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s;
+        }
+
+        .modal.show {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center">
+
+    <div id="container" class="grid grid-cols-2 gap-4 mt-6"></div>
+
+    <!-- Custom Alert Modal -->
+    <div id="customAlert" class="modal">
+        <div class="bg-white p-6 rounded-2xl shadow-lg w-80 text-center">
+            <h2 id="alertTitle" class="text-xl font-bold mb-2 text-blue-600">Title</h2>
+            <p id="alertMessage" class="text-gray-700 mb-4">Message</p>
+            <button id="closeAlert" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Reusable function for custom alert
+        function showCustomAlert(title, message) {
+            let modal = document.getElementById("customAlert");
+            document.getElementById("alertTitle").textContent = title;
+            document.getElementById("alertMessage").textContent = message;
+            modal.classList.add("show");
+
+            document.getElementById("closeAlert").onclick = () => {
+                modal.classList.remove("show");
+            };
+        }
+
+        // Example user object
+        let user1 = {
+            name: 'sai',
+            img: "https://4kwallpapers.com/images/walls/thumbs_2t/23646.jpg",
+            age: 22,
+            greet: function () {
+                let cont = document.getElementById('container');
+                let newdiv = document.createElement('div');
+                newdiv.className = 'w-[200px] h-[250px] border rounded-xl text-center p-2 bg-red-300 hover:bg-red-400';
+                newdiv.innerHTML = `
+          <img src="${this.img}" alt="${this.name}" class="myimg w-32 h-32 rounded-full mx-auto">
+          <p class="font-bold mt-2">${this.name}</p>
+          <button class="btn border p-2 mt-2 bg-sky-500 text-white rounded-full hover:bg-sky-600">GREET</button>
+        `;
+
+                let button = newdiv.querySelector(".btn");
+                button.addEventListener('click', () => {
+                    showCustomAlert("Hello 👋", `Hi, I am ${this.name}. My age is ${this.age}.`);
+                });
+
+                cont.appendChild(newdiv);
+            }
+        }
+
+        user1.greet();
+    </script>
+</body>
+
+</html>

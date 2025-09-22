@@ -1,0 +1,227 @@
+<!-- // let user1 = {
+//     name: 'sai',
+//     img: "https://4kwallpapers.com/images/walls/thumbs_2t/23646.jpg",
+//     age: 22,
+//     greet: function () {
+//         let cont = document.getElementById('container');
+//         let newdiv = document.createElement('div');
+//         newdiv.className = 'card1 border text-green-500 font-bold';
+
+//         newdiv.innerHTML = `<img src=${this.img} alt=${this.name}>
+//         <p>Name: ${this.name}</p>
+//         <button class="btn border rounded-full">GREET</button>
+//         `;
+
+//         let btn = document.querySelector(".btn");
+//         btn.addEventListener('click', () => {
+//             alert(`Hello bro ${this.name}`);
+//         })
+
+//         cont.appendChild(newdiv);
+
+//     }
+// }
+// user1.greet(); -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Alert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+    Button to trigger alert
+    <button onclick="showAlert()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        Show Alert
+    </button>
+
+    <div id="alertBox" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-2xl shadow-lg p-6 max-w-sm w-full text-center">
+            <h2 class="text-lg font-semibold text-gray-800">Custom Alert</h2>
+            <p class="text-gray-600 mt-2">This is a styled alert using Tailwind CSS!</p>
+            <button onclick="closeAlert()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showAlert() {
+            document.getElementById("alertBox").classList.remove("hidden");
+        }
+
+        function closeAlert() {
+            document.getElementById("alertBox").classList.add("hidden");
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+
+    <div class="w-96 bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h2 class="text-xl font-bold text-center mb-4">🎵 My Music Player</h2>
+
+        <!-- Track Info -->
+        <div class="text-center mb-4">
+            <h3 id="title" class="text-lg font-semibold">Song Title</h3>
+            <p id="artist" class="text-gray-400">Artist</p>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex justify-center gap-6 my-4">
+            <button onclick="prevSong()" class="px-3 py-2 bg-gray-700 rounded-full hover:bg-gray-600">⏮</button>
+            <button onclick="togglePlay()" id="playBtn"
+                class="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-500">▶️</button>
+            <button onclick="nextSong()" class="px-3 py-2 bg-gray-700 rounded-full hover:bg-gray-600">⏭</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="flex items-center gap-2">
+            <span id="currentTime" class="text-xs">0:00</span>
+            <input type="range" id="progress" value="0" class="w-full cursor-pointer" onchange="setProgress()">
+            <span id="duration" class="text-xs">0:00</span>
+        </div>
+
+        <!-- Playlist -->
+        <h3 class="mt-6 text-lg font-semibold">Playlist</h3>
+        <ul id="playlist" class="mt-2 space-y-1"></ul>
+    </div>
+
+    <script>
+        const songs = [
+            { title: "Song One", artist: "Artist A", src: "../assesets/love song.mp3" },
+            { title: "Song Two", artist: "Artist B", src: "../assesets/love song.mp3" },
+            { title: "Song Three", artist: "Artist C", src: "song3.mp3" },
+            { title: "Song Four", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.28.56_d28524e3.mp3" },
+            { title: "Song Five", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.28.57_24410e39.mp3" },
+            { title: "Song Six", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.28.57_432bffec.mp3" },
+            { title: "Song Seven", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.28.58_081232e8.mp3" },
+            { title: "Song Eight", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.28.58_7d2decb5.mp3" },
+            { title: "Song Nine", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.28.58_bba5a43b.mp3" },
+            { title: "Song Ten", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.28.59_5aac6905.mp3" },
+            { title: "Song Eleven", artist: "Artist B", src: "../assesets/WhatsApp Audio 2025-09-19 at 16.29.01_11ca7224.mp3" },
+        ];
+
+        let currentSongIndex = 0;
+        let isPlaying = false;
+        const audio = new Audio(songs[currentSongIndex].src);
+
+        const title = document.getElementById("title");
+        const artist = document.getElementById("artist");
+        const playBtn = document.getElementById("playBtn");
+        const progress = document.getElementById("progress");
+        const currentTimeEl = document.getElementById("currentTime");
+        const durationEl = document.getElementById("duration");
+        const playlist = document.getElementById("playlist");
+
+        // Load Song
+        function loadSong(index) {
+            const song = songs[index];
+            audio.src = song.src;
+            title.textContent = song.title;
+            artist.textContent = song.artist;
+            highlightCurrentSong();
+        }
+
+        // Play / Pause
+        function togglePlay() {
+            if (isPlaying) {
+                audio.pause();
+                playBtn.textContent = "▶️";
+            } else {
+                audio.play();
+                playBtn.textContent = "⏸";
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // Next / Previous
+        function nextSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            loadSong(currentSongIndex);
+            audio.play();
+            isPlaying = true;
+            playBtn.textContent = "⏸";
+        }
+
+        function prevSong() {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            loadSong(currentSongIndex);
+            audio.play();
+            isPlaying = true;
+            playBtn.textContent = "⏸";
+        }
+
+        // Progress Bar Update
+        audio.addEventListener("timeupdate", () => {
+            const { currentTime, duration } = audio;
+            progress.value = (currentTime / duration) * 100 || 0;
+
+            currentTimeEl.textContent = formatTime(currentTime);
+            durationEl.textContent = formatTime(duration);
+        });
+
+        // Seek
+        function setProgress() {
+            const seekTime = (progress.value / 100) * audio.duration;
+            audio.currentTime = seekTime;
+        }
+
+        // Format Time (mm:ss)
+        function formatTime(time) {
+            if (isNaN(time)) return "0:00";
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60).toString().padStart(2, "0");
+            return `${minutes}:${seconds}`;
+        }
+
+        // Playlist UI
+        function loadPlaylist() {
+            playlist.innerHTML = "";
+            songs.forEach((song, index) => {
+                const li = document.createElement("li");
+                li.textContent = `${song.title} - ${song.artist}`;
+                li.className = "cursor-pointer hover:text-blue-400";
+                li.onclick = () => {
+                    currentSongIndex = index;
+                    loadSong(index);
+                    audio.play();
+                    isPlaying = true;
+                    playBtn.textContent = "⏸";
+                };
+                playlist.appendChild(li);
+            });
+            highlightCurrentSong();
+        }
+
+        function highlightCurrentSong() {
+            [...playlist.children].forEach((li, index) => {
+                li.classList.toggle("text-blue-400", index === currentSongIndex);
+            });
+        }
+
+        // Auto Play Next Song
+        audio.addEventListener("ended", nextSong);
+
+        // Init
+        loadSong(currentSongIndex);
+        loadPlaylist();
+    </script>
+</body>
+
+</html>
