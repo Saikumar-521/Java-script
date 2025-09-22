@@ -121,18 +121,18 @@ Use removeChild() on the parent, passing the child to remove.
 
 */
 
-let demo = document.getElementById('demo');
+// let demo = document.getElementById('demo');
 
-let newdiv = document.createElement('div');
+// let newdiv = document.createElement('div');
 //newdiv.className('demo1')-------> if we use the className isa property not a method
-newdiv.innerText = 'hi iam from js file and by using createElement method';
-demo.appendChild(newdiv);
+// newdiv.innerText = 'hi iam from js file and by using createElement method';
+// demo.appendChild(newdiv);
 
-let dem = document.getElementById('demo');
-let parent = document.createElement('p');
-parent.innerText = 'i am from append() method js';
+// let dem = document.getElementById('demo');
+// let parent = document.createElement('p');
+// parent.innerText = 'i am from append() method js';
 
-dem.append('before appending text also written in the append method', parent);
+// dem.append('before appending text also written in the append method', parent);
 
 // let parent = document.getElementById('sp');
 
@@ -144,17 +144,94 @@ dem.append('before appending text also written in the append method', parent);
 
 //info.remove();
 
-let parent = document.getElementById('demo');
-let newDiv = document.createElement('div');
-newDiv.innerText = 'This is the new element';
+// let parent = document.getElementById('demo');
+// let newDiv = document.createElement('div');
+// newDiv.innerText = 'This is the new element';
 
-//let oldChild = parent.firstChild; // or any child you want to replace
-parent.replaceChild(newDiv);
+// //let oldChild = parent.firstChild; // or any child you want to replace
+// parent.replaceChild(newDiv);
 
-let element = document.getElementById('demo');
-element.remove();
+// let element = document.getElementById('demo');
+// element.remove();
 
 
 /*
+3.Attribute Manipulation:
+
+In JavaScript, attribute manipulation means getting, setting, adding, or removing attributes of an HTML element. 
+Attributes are the extra properties you see in HTML tags (like id, class, src, href, alt, etc.).
+1.getAttribute()
+gets the value of the attribute(href) from the element
+
+2.setAttribute()
+Updates/sets a new value to an attribute.
+this method takes two parameter first one-->attribute name like (alt,href) and second parameter is value
+
+3.removeAttribute()
+Removes the target attribute completely.
+
+4.hasAttribute()
+it return true or false if attribute is present otherwise false
+*/
+
+let link = document.getElementById("myLink");
+let hrefValue = link.getAttribute("href");
+console.log(hrefValue);
+
+link.setAttribute("href", "https://www.google.com");
+
+link.removeAttribute("target");
+let a = document.getElementById('myImage');
+a.removeAttribute('alt');
+
+let hasAttr = link.hasAttribute("href");
+console.log(hasAttr); // true or false
+console.log(a.hasAttribute('alt'));
+console.log(a);
+a.remove()
+
+
+
+/*
+4.class manipulation:
+Classes are managed through the classList property of an element. 
+This gives you methods to add, remove, toggle, or check CSS classes.
+
+1.add()
+Adds a class without removing existing ones.
+
+2.remove()
+Removes a specific class from the element.
+
+3.toggle()
+If the class exists → remove it.
+If it doesn’t → add it.
+
+4.contains()
+it will returns true or flase if there is a class name it return true otherwise false
+
+5.replace()
+replace the oldclass name with new class name
+document.getElementById("myDiv").classList.replace("oldClass", "newClass");
+
 
 */
+let mydiv = document.getElementById('mydiv');
+mydiv.classList.add('highlight') //it will create a class in the mydiv element and class name is highlight
+
+//remove the the class name we use remove method and we pass here class name
+
+mydiv.classList.remove('highlight');
+
+mydiv.classList.toggle("active"); //if there is a active it reomes otherwise create a active class inside mydiv element
+//mydiv.classList.toggle("active");
+
+let hasClass = mydiv.classList.contains("active");
+console.log(hasClass); // true or false
+
+mydiv.classList.replace("nonactive", "active");
+
+
+
+
+
