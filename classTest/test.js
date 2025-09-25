@@ -52,10 +52,20 @@ for (let i = 0; i < value; i++) {
 
 
 for (let i = 1; i <= value; i++) {
-    let s;
-    for (let j = 0; j <= value - 1; j++)
+    let s = '';
+    for (let j = 0; j <= value - i; j++)
         s += " ";
     for (let k = 0; k <= i; k++)
-        s += "*";
+        s += " * ";
+    console.log(s);
+}
+
+value = 5;
+for (let i = 1; i <= value; i++) {
+    let s = '';
+    for (let j = 1; j <= value - i; j++)
+        s += " ";
+    for (let k = 1; k <= i; k++)
+        s += "* ";
     console.log(s);
 }
