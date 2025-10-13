@@ -69,3 +69,9 @@ function countdownTimer() {
 
 // Call function every second
 let timer = setInterval(countdownTimer, 1000);
+
+
+let fun = (a) => {
+    console.log(a, 'this arrow function');
+}
+fun(10)

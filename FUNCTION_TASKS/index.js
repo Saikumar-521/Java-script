@@ -65,3 +65,16 @@ function toggleTheme() {
         localStorage.setItem('theme', 'light');
     }
 }
+
+let discount = document.getElementById('discount_btn');
+discount.addEventListener('click', () => {
+    let dis = products.map(product => product.price * 0.9)
+    // dis.innerHTML += `<li>${dis}</li>`;
+    dis.forEach(price => {
+        let li = document.createElement('p');
+        li.textContent = `${price}`;
+        discount.appendChild(li);
+    });
+});
+
+let
