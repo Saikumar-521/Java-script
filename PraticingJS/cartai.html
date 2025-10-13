@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center">
+
+    <h1 class="text-3xl font-bold mt-4">Products</h1>
+
+    <div class="mt-4">
+        <input type="text" id="search_name" class="bg-gray-200 px-2 border rounded-xl" placeholder="Search product">
+        <button id="btn" class="bg-blue-500 text-white px-4 py-1 rounded ml-2">Search</button>
+        <a href="cart.html" class="bg-green-500 text-white px-4 py-1 rounded ml-2">Go to Cart</a>
+    </div>
+
+    <div id="ProductContainer" class="flex flex-wrap justify-center mt-4"></div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Laptop", price: 20000, img: "https://tse3.mm.bing.net/th/id/OIP.m4cAv5M-cb-V45Tbuv6ZsQHaFC?pid=Api&P=0&h=180" },
+            { id: 2, name: "Mobile", price: 3000, img: "https://tse2.mm.bing.net/th/id/OIP.gt7skxQSCOrtDvpDIGIugQHaE7?pid=Api&P=0&h=180" },
+            { id: 3, name: "Tab", price: 45000, img: "https://tse2.mm.bing.net/th/id/OIP.3I39LG45NfZbD-MUgO3rowHaEK?pid=Api&P=0&h=180" },
+            { id: 4, name: "Mouse", price: 786, img: "https://tse2.mm.bing.net/th/id/OIP.pvRIr-hT6b37xHv_4joseQHaEJ?pid=Api&P=0&h=180" },
+            { id: 5, name: "TV", price: 45000, img: "https://tse2.mm.bing.net/th/id/OIP.Fiuo8FZ7VhIAMgvGElTxwQHaEo?pid=Api&P=0&h=180" },
+        ];
+
+        function renderProducts(list) {
+            const container = document.getElementById('ProductContainer');
+            container.innerHTML = '';
+            list.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-white shadow m-2 p-4 rounded w-60 flex flex-col items-center";
+                card.innerHTML = `
+                    <img src="${p.img}" alt="${p.name}" class="w-40 h-32 rounded">
+                    <h2 class="text-xl font-semibold mt-2">${p.name}</h2>
+                    <p class="mt-1">₹${p.price}</p>
+                    <button class="bg-blue-500 text-white px-4 py-1 mt-2 rounded add-cart">Add to Cart</button>
+                `;
+                container.appendChild(card);
+
+                card.querySelector('.add-cart').addEventListener('click', () => {
+                    addToCart(p);
+                });
+            });
+        }
+
+        renderProducts(products);
+
+        // Filter products
+        document.getElementById('btn').addEventListener('click', () => {
+            const input = document.getElementById('search_name').value.toLowerCase();
+            const filtered = products.filter(p => p.name.toLowerCase().includes(input));
+            renderProducts(filtered);
+        });
+
+        function addToCart(product) {
+            // get cart from localStorage or empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // check if product already exists in cart
+            let exists = cart.find(function (item) {
+                return item.id === product.id;
+            });
+
+            if (!exists) {
+                // add product manually without destructuring
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    img: product.img,
+                    qty: 1
+                });
+            } else {
+                exists.qty++;
+            }
+
+            // save back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(product.name + " added to cart!");
+        }
+
+    </script>
+</body>
+
+</html>

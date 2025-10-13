@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,6 +16,42 @@
     <div id="tones"></div>
 
     <script src="emoji.js"></script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji Tone Changer</title>
+</head>
+
+<body>
+    <h1>Change Emoji Tone</h1>
+    <p id="emoji" style="font-size: 50px;">👍</p>
+
+    <button onclick="changeTone('light')">Light</button>
+    <button onclick="changeTone('medium')">Medium</button>
+    <button onclick="changeTone('dark')">Dark</button>
+
+    <script>
+        const emoji = document.getElementById("emoji");
+
+        function changeTone(tone) {
+            let base = "👍"; // base emoji
+            let modifier = "";
+            switch (tone) {
+                case 'light': modifier = "\u{1F3FB}"; break;
+                case 'medium-light': modifier = "\u{1F3FC}"; break;
+                case 'medium': modifier = "\u{1F3FD}"; break;
+                case 'medium-dark': modifier = "\u{1F3FE}"; break;
+                case 'dark': modifier = "\u{1F3FF}"; break;
+                default: modifier = ""; break;
+            }
+            emoji.textContent = base + modifier;
+        }
+    </script>
 </body>
 
 </html>
