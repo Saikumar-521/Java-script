@@ -34,6 +34,8 @@ types of Variable:
   c.block scope
   d.hoisting is possible but value is not assinged
 
+var is hoisted and initialized with undefined immediately.
+let and const are hoisted but not initialized until their declaration.
 
 Variable name Rules:
 1.must  start with a letter, underscore,or dollar sign.
