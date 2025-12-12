@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="dummy.css"> -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-3xl font-bold mt-6 mb-4 text-gray-800">📱 Smartphones Collection</h1>
+
+  <!-- ✅ Products Grid -->
+  <div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 w-full max-w-7xl"></div>
+
+  <!-- ✅ Product Details Section (Hidden Initially) -->
+  <div id="product-details" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-6 w-[90%] max-w-3xl shadow-lg relative">
+      <button id="closeDetails" class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+      <div id="details-content"></div>
+    </div>
+  </div>
+    <script src="dummy.js"></script>
+</body>
+</html>
